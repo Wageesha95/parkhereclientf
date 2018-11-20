@@ -35,38 +35,46 @@
         android:hint="Email"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/editText"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignBaseline="@+id/tvemail"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="188dp"
-        android:ems="10"
-        android:hint="NIC"
-        android:inputType="textPersonName" />
+        android:orientation="vertical"
+        android:paddingTop="20dp">
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="69dp"
-        android:ems="10"
-        android:hint="Mobile No"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/nic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="NIC"
+            android:inputType="textPersonName" />
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="131dp"
-        android:ems="10"
-        android:hint="DOB"
-        android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Mobile No"
+            android:inputType="textPersonName" />
+
+        <!--<EditText
+            android:id="@+id/dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="DOB"
+            android:inputType="date" />-->
+
+        <EditText
+            android:id="@+id/regcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Registration code"
+            android:inputType="textPersonName" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/button2"
@@ -74,26 +82,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:onClick="sendData"
         android:layout_marginBottom="12dp"
         android:text="GET STARTED" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="329dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/imageView"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="-68dp"
-        android:text="My Vehicles" />
-
-    <Button
+        android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textAllCaps="false"
-        android:id="@+id/logout"
         android:layout_alignParentRight="true"
         android:onClick="logout"
-        />
+        android:text="Logout"
+        android:textAllCaps="false" />
 
 </RelativeLayout>

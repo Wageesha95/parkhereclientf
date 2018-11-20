@@ -115,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
                                 editor.putString(Constants.USER_FNAME, user.get("fname").toString());
                                 editor.putString(Constants.USER_LNAME, user.get("lname").toString());
                                 editor.putString(Constants.USER_EMAIL, user.get("email").toString());
+                                editor.putString(Constants.USER_REGCODE, user.get("regcode").toString());
+                                editor.putString(Constants.USER_REGISTERED, user.get("registered").toString());
                                 editor.apply();
 
                                 Intent intent = new Intent(MainActivity.this, Profile.class);

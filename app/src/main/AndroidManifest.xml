@@ -20,7 +20,13 @@
         </activity>
         <activity android:name=".Registration" />
         <activity android:name=".Profile" />
-        <activity android:name=".fgtpw"></activity>
+        <activity android:name=".fgtpw" />
+        <activity android:name=".Main2Activity"
+            android:windowSoftInputMode="stateHidden"
+            />
+        <activity android:name=".VehicleEditor"
+            android:windowSoftInputMode="stateHidden"
+            ></activity>
     </application>
 
 </manifest>

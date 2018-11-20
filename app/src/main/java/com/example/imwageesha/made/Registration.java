@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +22,9 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Registration extends AppCompatActivity {
 
@@ -54,14 +58,15 @@ public class Registration extends AppCompatActivity {
         String url = Constants.BASE_URL + "/api/register";
 
         JSONObject obj = new JSONObject();
-
+        int randomNum = 1111 + (int)(Math.random() * (9999 - 1111) );
         try {
             obj.put("firstName",etfname.getText().toString());
             obj.put("lastName",etlname.getText().toString());
             obj.put("email",etemail.getText().toString());
             obj.put("password",etpw.getText().toString());
+            obj.put("regcode",Integer.toString(randomNum));
         } catch (JSONException e) {
-            e.printStackTrace();
+            Log.e("JSON",e.toString());
         }
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest
